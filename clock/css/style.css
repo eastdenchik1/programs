@@ -1,0 +1,19 @@
+
+
+#clock {
+	text-transform: uppercase;
+	font-weight: 100;
+	font-size: 144px;
+	margin-top: 300px;
+	margin-left: 35%;
+	color: #efefef;
+}
+
+#color {
+	text-transform: uppercase;
+	font-weight: 100;
+	font-size: 36px;
+	margin-top: 300px;
+	margin-left: 45%;
+	color: #efefef;
+}
