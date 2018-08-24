@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Timer</title>
+	<style>
+		* {
+			color: red;
+			background: skyblue;
+			text-transform: uppercase;
+			text-align: center;
+			margin-top: 10%;
+			font-size: 80px;
+			font-weight: bold;
+			
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div id="timer">
+			
+		</div>
+	</div>
+
+	<script>
+		var targetdate = new Date(2018, 9, 1).getTime();
+
+		var interval = setInterval(function (){
+			var now = new Date().getTime();
+			var distance = targetdate - now;
+			var days = Math.floor(distance/(1000*3600*24));
+			var hours = Math.floor((distance%(1000*3600*24))/(1000*3600));
+			var min = Math.floor(((distance%(1000*3600*24))/(1000*60))-360);
+			var sec = Math.floor((distance%(1000*60))/1000);
+			document.getElementById("timer").innerHTML = days+" д. "+hours+" ч. "+min+" мин. "+sec+" сек. ";
+			if (distance<0) {
+				clearInterval(interval);
+				document.getElementById("timer").innerHTML = "Финиш!";
+			}
+		}, 1000);
+
+	</script>
+</body>
+</html>
