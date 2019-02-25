@@ -1,1 +1,1 @@
-<h3>Таймер на JavaScript.</h3>
+<h3>Часы на JavaScript.</h3>
